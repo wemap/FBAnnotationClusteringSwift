@@ -19,6 +19,10 @@ open class FBQuadTree {
         return insert(annotation: annotation, toNode:rootNode)
     }
 
+    func remove(annotation: MKAnnotation) -> Bool {
+        return remove(annotation: annotation, fromNode:rootNode)
+    }
+
     func enumerateAnnotations(inBox box: FBBoundingBox, callback: (MKAnnotation) -> Void) {
 		enumerateAnnotations(inBox: box, withNode:rootNode, callback: callback)
     }
@@ -28,6 +32,37 @@ open class FBQuadTree {
     }
 
 	// MARK: Private functions
+    private func remove(annotation: MKAnnotation, fromNode node: FBQuadTreeNode) -> Bool {
+        if node.remove(annotation: annotation) {
+            return true
+        }
+        
+        if let northEast = node.northEast {
+            if remove(annotation: annotation, fromNode: northEast) {
+            return true
+            }
+        }
+        
+        if let northWest = node.northWest {
+            if remove(annotation: annotation, fromNode: northWest) {
+                return true
+            }
+        }
+
+        if let southEast = node.southEast {
+            if remove(annotation: annotation, fromNode: southEast) {
+                return true
+            }
+        }
+
+        if let southWest = node.southWest {
+            if remove(annotation: annotation, fromNode: southWest) {
+                return true
+            }
+        }
+
+        return false
+    }
 
 	private func insert(annotation: MKAnnotation, toNode node: FBQuadTreeNode) -> Bool {
 		if !node.boundingBox.contains(coordinate: annotation.coordinate) {

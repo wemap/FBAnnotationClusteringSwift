@@ -14,7 +14,6 @@ public protocol FBClusteringManagerDelegate: NSObjectProtocol {
 }
 
 public class FBClusteringManager {
-
     public weak var delegate: FBClusteringManagerDelegate? = nil
 
 	private var backingTree: FBQuadTree?
@@ -45,6 +44,12 @@ public class FBClusteringManager {
         lock.unlock()
     }
 
+    public func remove(annotations:[MKAnnotation]){
+        lock.lock()
+        annotations.forEach { _ = tree?.remove(annotation: $0) }
+        lock.unlock()
+    }
+
 	public func removeAll() {
 		tree = nil
 	}
@@ -53,7 +58,7 @@ public class FBClusteringManager {
 		removeAll()
 		add(annotations: annotations)
 	}
-
+    
 	public func allAnnotations() -> [MKAnnotation] {
 		var annotations = [MKAnnotation]()
 		lock.lock()

@@ -41,6 +41,15 @@ open class FBQuadTreeNode {
 		return false
 	}
     
+    func remove(annotation: MKAnnotation) -> Bool {
+        if let item_idx = annotations.index(where: { $0 === annotation }) {
+            annotations.remove(at: item_idx)
+            return true
+        }
+        
+        return false
+    }
+    
     func isLeaf() -> Bool {
         return (northEast == nil) ? true : false
     }
