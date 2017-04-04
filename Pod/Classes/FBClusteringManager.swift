@@ -14,8 +14,6 @@ public protocol FBClusteringManagerDelegate: NSObjectProtocol {
 }
 
 public class FBClusteringManager {
-    public typealias FBClusteringAnnotations = ((_ toFilter: [MKAnnotation]) -> [MKAnnotation])
-    
     public weak var delegate: FBClusteringManagerDelegate? = nil
 
 	private var backingTree: FBQuadTree?
@@ -155,14 +153,5 @@ public class FBClusteringManager {
 		if let removeAnnotations = toRemove.allObjects as? [MKAnnotation] {
 			mapView.removeAnnotations(removeAnnotations)
 		}
-    }
-    
-    public func display(annotations: [MKAnnotation], onMapView mapView:MKMapView, toRemove removeAnnotations: FBClusteringAnnotations){
-        let toRemove = removeAnnotations(self.allAnnotations())
-        self.remove(annotations: toRemove)
-        mapView.removeAnnotations(toRemove)
-        
-        self.add(annotations: annotations)
-        mapView.addAnnotations(annotations)
     }
 }
