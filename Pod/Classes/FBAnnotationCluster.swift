@@ -16,6 +16,14 @@ open class FBAnnotationCluster: NSObject {
     open var subtitle: String?
     
     open var annotations: [MKAnnotation] = []
+    open var clusterRect: MKMapRect {
+        var rect = MKMapRectNull
+        annotations.forEach {
+            rect = MKMapRectUnion(rect, MKMapRect(origin: MKMapPointForCoordinate($0.coordinate),
+                                                  size: MKMapSize(width: 0.0, height: 0.0)))
+        }
+        return rect
+    }
 }
 
 extension FBAnnotationCluster : MKAnnotation { }
