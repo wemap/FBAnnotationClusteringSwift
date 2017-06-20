@@ -38,9 +38,7 @@ public class FBClusteringManager {
 
 	public func add(annotations:[MKAnnotation]){
         lock.lock()
-        for annotation in annotations {
-			_ = tree?.insert(annotation: annotation)
-        }
+        annotations.forEach { _ = tree?.insert(annotation: $0) }
         lock.unlock()
     }
 

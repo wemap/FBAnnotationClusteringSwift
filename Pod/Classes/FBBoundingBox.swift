@@ -28,4 +28,9 @@ extension FBBoundingBox {
 	}
 }
 
-
+func == (lhs: FBBoundingBox, rhs: FBBoundingBox) -> Bool {
+    return lhs.x0 == rhs.x0
+        && lhs.y0 == rhs.y0
+        && lhs.xf == rhs.xf
+        && lhs.yf == rhs.yf
+}

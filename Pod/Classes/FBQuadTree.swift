@@ -99,12 +99,16 @@ open class FBQuadTree {
             return
         }
 
-        for annotation in node.annotations {
-            if box.contains(coordinate: annotation.coordinate) {
-                callback(annotation)
+        if box ==  FBBoundingBox(mapRect: MKMapRectWorld) {
+            node.annotations.forEach { callback($0) }
+        } else {
+            node.annotations.forEach {
+                if box.contains(coordinate: $0.coordinate) {
+                    callback($0)
+                }
             }
         }
-        
+
         if node.isLeaf() {
             return
         }
