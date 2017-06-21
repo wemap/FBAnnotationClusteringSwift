@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,22 +18,61 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NBw-Tg-iYh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="lHw-o7-Qge"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-6Q-hah">
+                                <rect key="frame" x="0.0" y="20" width="149" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lho-DN-v2S"/>
+                                    <constraint firstAttribute="width" constant="149" id="nYD-aR-iJw"/>
+                                </constraints>
+                                <state key="normal" title="Remove 100 Points"/>
+                                <connections>
+                                    <action selector="touchRemove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFt-by-Ovo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9d-Px-0gq">
+                                <rect key="frame" x="0.0" y="58" width="149" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="BsH-Z6-bZb"/>
+                                    <constraint firstAttribute="height" constant="30" id="UPY-XS-D4n"/>
+                                </constraints>
+                                <state key="normal" title="Get All Points"/>
+                                <connections>
+                                    <action selector="touchGetAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zm6-AO-PgT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-GK-gBK">
+                                <rect key="frame" x="313" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="ccv-EQ-TII"/>
+                                    <constraint firstAttribute="height" constant="30" id="fkd-yP-e2Y"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="touchReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hH0-P4-pJT"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NBw-Tg-iYh" secondAttribute="bottom" id="FhB-hC-XUs"/>
+                            <constraint firstItem="g9d-Px-0gq" firstAttribute="top" secondItem="ZwS-6Q-hah" secondAttribute="bottom" constant="8" id="25d-Pg-Jc7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NBw-Tg-iYh" secondAttribute="bottom" id="5AP-5h-Pg6"/>
                             <constraint firstAttribute="trailing" secondItem="NBw-Tg-iYh" secondAttribute="trailing" id="GcC-yF-2H2"/>
+                            <constraint firstItem="WFm-GK-gBK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hbk-qi-FTa"/>
                             <constraint firstItem="NBw-Tg-iYh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Iro-MB-x2X"/>
+                            <constraint firstItem="ZwS-6Q-hah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JBa-fw-O6v"/>
+                            <constraint firstItem="g9d-Px-0gq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VOp-by-HDl"/>
                             <constraint firstItem="NBw-Tg-iYh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bRi-4g-6Z4"/>
+                            <constraint firstItem="WFm-GK-gBK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qca-9d-9az"/>
+                            <constraint firstItem="ZwS-6Q-hah" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="r3g-BG-l29"/>
                         </constraints>
                     </view>
                     <connections>
@@ -37,6 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>

@@ -57,14 +57,14 @@ public class FBClusteringManager {
 		add(annotations: annotations)
 	}
     
-	public func allAnnotations() -> [MKAnnotation] {
-		var annotations = [MKAnnotation]()
+    public var annotations: [MKAnnotation] {
+		var annots = [MKAnnotation]()
 		lock.lock()
 		tree?.enumerateAnnotationsUsingBlock(){ obj in
-			annotations.append(obj)
+			annots.append(obj)
 		}
 		lock.unlock()
-		return annotations
+		return annots
 	}
 
     public func clusteredAnnotations(withinMapRect rect:MKMapRect, zoomScale: Double) -> [MKAnnotation] {

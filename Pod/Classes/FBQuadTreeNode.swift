@@ -44,7 +44,7 @@ open class FBQuadTreeNode {
     func remove(annotation: MKAnnotation) -> Bool {
         let initial_cnt = annotations.count
         annotations = annotations.filter { $0 !== annotation }
-        return initial_cnt == annotations.count
+        return initial_cnt != annotations.count
     }
     
     func isLeaf() -> Bool {
