@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FBAnnotationClusteringSwift.xcodeproj">
+      location = "group:/Users/ilyaseliverstov/Projects/wemap-ios-sdk/FBAnnotationClusteringSwift/Example/FBAnnotationClusteringSwiftWemap.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
