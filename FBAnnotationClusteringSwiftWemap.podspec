@@ -18,7 +18,7 @@ Swift translation of FB Annotation Clustering, which clusters pins on the map fo
   s.homepage         = "https://github.com/wemap/FBAnnotationClusteringSwift"
   s.license          = 'MIT'
   s.author           = { "Giuseppe Russo" => "freemiumdev@outlook.it" }
-  s.source           = { :git => "https://github.com/wemap/FBAnnotationClusteringSwift.git"
+  s.source           = { :git => "https://github.com/wemap/FBAnnotationClusteringSwift.git", :branch => "rename"
   #, :tag => s.version
   }
 
