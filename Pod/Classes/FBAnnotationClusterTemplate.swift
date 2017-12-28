@@ -9,14 +9,19 @@
 import Foundation
 
 public enum FBAnnotationClusterDisplayMode {
-	case SolidColor(sideLength: CGFloat, color: UIColor)
-	case Image(imageName: String)
+	case solidColor(sideLength: CGFloat, color: UIColor)
+	case image(sideLength: CGFloat, url: URL?)
 }
 
 public struct FBAnnotationClusterTemplate {
-
-	let range: Range<Int>?
-	let displayMode: FBAnnotationClusterDisplayMode
+    public static let defaultColor = UIColor(red: 47.0/255.0,
+                                             green: 125.0/255.0,
+                                             blue: 255.0/255.0,
+                                             alpha: 1.0)
+    
+    let range: Range<Int>?
+    public var displayMode = FBAnnotationClusterDisplayMode.solidColor(sideLength: 50.0,
+                                                                       color: FBAnnotationClusterTemplate.defaultColor)
 
 	public var borderWidth: CGFloat = 0
 
@@ -36,11 +41,8 @@ public struct FBAnnotationClusterTemplate {
 		self.displayMode = displayMode
 	}
 
-	public init (range: Range<Int>?, sideLength: CGFloat) {
-		self.init(range: range, displayMode: .SolidColor(sideLength: sideLength,
-		                                                 color: UIColor(red: 47.0/255.0,
-		                                                                green: 125.0/255.0,
-		                                                                blue: 255.0/255.0,
-		                                                                alpha: 1.0)))
-	}
+    public init (range: Range<Int>?, sideLength: CGFloat, color: UIColor? = nil) {
+        self.init(range: range, displayMode: .solidColor(sideLength: sideLength,
+                                                         color: color ?? FBAnnotationClusterTemplate.defaultColor))
+    }
 }

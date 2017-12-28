@@ -31,9 +31,9 @@
 		1216A1A61EF96A1F00E06E6F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		19057509F538F5BE8B2B14F5 /* Pods-FBAnnotationClusteringSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBAnnotationClusteringSwift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBAnnotationClusteringSwift_Example/Pods-FBAnnotationClusteringSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5DDEB7EA347330812AE0DF89 /* Pods-FBAnnotationClusteringSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBAnnotationClusteringSwift_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBAnnotationClusteringSwift_Example/Pods-FBAnnotationClusteringSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* FBAnnotationClusteringSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBAnnotationClusteringSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBAnnotationClusteringSwiftWemap_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* FBAnnotationClusteringSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBAnnotationClusteringSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBAnnotationClusteringSwiftWemap_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7F27E8C19C5A405B5072D1D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* FBAnnotationClusteringSwift_Example.app */,
-				607FACE51AFB9204008FA782 /* FBAnnotationClusteringSwift_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Example.app */,
+				607FACE51AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* FBAnnotationClusteringSwift_Example */ = {
+		607FACCF1AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FBAnnotationClusteringSwift_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FBAnnotationClusteringSwiftWemap_Example" */;
 			buildPhases = (
 				E8AE06806BE7FD0D3826DDCB /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -172,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = FBAnnotationClusteringSwift_Example;
+			name = FBAnnotationClusteringSwiftWemap_Example;
 			productName = FBAnnotationClusteringSwift;
-			productReference = 607FACD01AFB9204008FA782 /* FBAnnotationClusteringSwift_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* FBAnnotationClusteringSwift_Tests */ = {
+		607FACE41AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FBAnnotationClusteringSwift_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FBAnnotationClusteringSwiftWemap_Tests" */;
 			buildPhases = (
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
-			name = FBAnnotationClusteringSwift_Tests;
+			name = FBAnnotationClusteringSwiftWemap_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* FBAnnotationClusteringSwift_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FBAnnotationClusteringSwift" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FBAnnotationClusteringSwiftWemap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* FBAnnotationClusteringSwift_Example */,
-				607FACE41AFB9204008FA782 /* FBAnnotationClusteringSwift_Tests */,
+				607FACCF1AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Example */,
+				607FACE41AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,7 +327,7 @@
 /* Begin PBXTargetDependency section */
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* FBAnnotationClusteringSwift_Example */;
+			target = 607FACCF1AFB9204008FA782 /* FBAnnotationClusteringSwiftWemap_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBAnnotationClusteringSwift_Example.app/FBAnnotationClusteringSwift_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBAnnotationClusteringSwiftWemap_Example.app/FBAnnotationClusteringSwiftWemap_Example";
 			};
 			name = Debug;
 		};
@@ -506,14 +506,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBAnnotationClusteringSwift_Example.app/FBAnnotationClusteringSwift_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBAnnotationClusteringSwiftWemap_Example.app/FBAnnotationClusteringSwiftWemap_Example";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FBAnnotationClusteringSwift" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FBAnnotationClusteringSwiftWemap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FBAnnotationClusteringSwift_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FBAnnotationClusteringSwiftWemap_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -531,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FBAnnotationClusteringSwift_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FBAnnotationClusteringSwiftWemap_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
