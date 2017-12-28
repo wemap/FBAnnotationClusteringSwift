@@ -18,7 +18,7 @@ public struct FBAnnotationClusterViewConfiguration {
 		self.defaultTemplate = defaultTemplate
 	}
 
-	public static func `default`() -> FBAnnotationClusterViewConfiguration {
+    public static var `default`: FBAnnotationClusterViewConfiguration {
 		var smallTemplate = FBAnnotationClusterTemplate(range: Range(uncheckedBounds: (lower: 0, upper: 6)), sideLength: 30)
 		smallTemplate.borderWidth = 3
 		smallTemplate.fontSize = 13
